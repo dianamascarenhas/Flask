@@ -1,22 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link href = 'http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet'>
-      <link href = "static/css/main.css" rel="stylesheet">
-      </head>
-  <body>
-    <header>
-      <div class="container">
-        <h1 class="title">Learning Flask</h1>
-      </div>
-    </header>
+{% extends "layout.html" %}
 
+{% block content %}
     <main class="hero-section">
     <div class="container">
       <div class="section-content">
         <h2>Discover places near you</h2>
         <a href = "#" class="btn-primary">Sign Up</a>
-        <a href = "#" class="btn-secondary">Learn More</a>
+        <a href = "{{ url_for('about') }}" class="btn-secondary">Learn More</a>
       </div>
 
       <div class = "section-device">
@@ -27,5 +17,4 @@
 
     </div>
     </main>
-    </body>
-</html>
+    {% endblock %}
